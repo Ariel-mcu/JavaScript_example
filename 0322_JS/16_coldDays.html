@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+</head>
+<body>   
+    <!-- 產生五個 -5 ~ 5 之間的整數溫度，計算低於零度的百分比 -->
+
+    <p id="feedback"></p>
+
+    <script>
+        window.onload = function(){ 
+            let coldDay = 0;
+            let feedback = '';
+            const FREEZING = 0;
+
+            for(let i = 0; i < 5; i++){
+                temperature = parseInt(Math.random() * 11) - 5
+                feedback += `${temperature} `
+
+                if(temperature < FREEZING){
+                    coldDay++;
+                }
+            }
+            feedback += `<br>`
+            feedback += `5 days total <span style="color:maroon;">${coldDay / 5 * 100}%</span> were below freezing.`
+
+            document.getElementById('feedback').innerHTML = feedback;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: do ... while 迴圈</title>
+</head>
+<body>
+    <p id="result"></p>
+
+
+    <script>
+        window.onload = function(){  // 匿名函數
+            const SECRET_CODE = 13;
+            let password = '';
+            do{
+                password = prompt(`To enter the MFEE25 programming club, please enter your secret code.`);
+            }while(password != SECRET_CODE);
+
+            result.innerText = `Congratuation! You are cured.`;
+
+            // 用 while 寫
+            // password = prompt(`To enter the MFEE25 programming club, please enter your secret code.`);
+
+            // while(password != SECRET_CODE){
+            //     password = prompt(`To enter the MFEE25 programming club, please enter your secret code.`);
+            // }
+            // result.innerText = `Congratuation! You are cured.`;
+        };
+    </script>
+</body>
+</html>

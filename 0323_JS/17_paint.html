@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: 條件(三元)運算子 ? :</title>
+</head>
+<body>   
+    <!-- 每桶油漆可以漆 200 square feet -->
+    你需要油漆的面積(square feet): <input type="text" id="squareFeet">
+    <button id="calButton">calculate</button>
+
+    <p id="feedback"></p>
+        
+    <script>
+        function doFirst(){
+            calButton.addEventListener('click',calculate);
+        }
+        function calculate(){
+            let squareFeet = document.getElementById('squareFeet').value;
+            let cans = 0;
+            let coverage = 200;
+
+            cans += parseInt(squareFeet / coverage)
+            cans += (squareFeet % coverage == 0) ? 0 : 1;
+            
+            // document.getElementById('feedback').innerText = `You need ${cans} cans of paint.`
+            document.getElementById('feedback').innerText = `You need ${cans} ${(cans <= 1) ? 'can' : 'cans'} of paint.`
+        }
+        window.onload = doFirst;
+        // window.addEventListener('load',doFirst)
+        // cans > 1  ---> ? cans
+        // cans <= 1  ---> 1 can or 0 can
+        
+    </script>
+</body>
+</html>

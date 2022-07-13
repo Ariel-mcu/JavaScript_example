@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: Object 物件</title>
+</head>
+<body>  
+    <script>
+     
+    1. 建立 Object 物件
+       let obj = {};
+       let obj = new Object();
+
+       <!-- 給值的第一種寫法 -->
+       let obj = {};
+       obj.name = 'Peter';
+       obj.age = 40;
+       obj.gender = 'male';
+
+       <!-- 給值的第二種寫法 -->
+       let obj = {
+           name: 'Peter',
+           age: 40,
+           gender: 'male'
+       };
+    ----------------------------
+    let man = {
+        name: 'Peter',
+        age: 40,
+        gender: 'male',
+        favoriateColor: ['white','black','gray'],
+        car: {
+            make: 'BMW',
+            mode: 'X5',
+            year: 2021,
+        },
+        retired: false,
+        // sayHello: function(){},  // ES5
+        // sayHello(){},  // ES6
+        sayHello(){
+            console.log('Hello!');
+        },
+    };
+
+    2. 如何存取?
+       console.log(man.name);    // Peter
+
+       man.name ---> Peter
+       man.sayHello() ---> Hello!
+
+       man.favoriateColor[1] ---> black
+       man.car.make ---> BMW
+       
+       物件的陣列標示法
+       man['favoriateColor'][1] ---> black
+       man['car']['make'] ---> BMW
+
+       let products = {
+           10: 'hat',
+           20: 't-shirt',
+           30: 'iPad',
+           40: 'Mac pro',
+           50: 'iPhone',
+           60: 'Air Pods',
+       };
+       products.30  ---> XX
+       products[30] ---> iPad
+
+       // for(let key in 物件或陣列){}
+       for(let key in man){
+           console.log(key);  // 印出「:」左邊的 key 值
+           console.log(man[key]);  // 印出「:」右邊的 value 值
+       }
+
+    3. 刪除 Object 的屬性
+       delete man.retired
+    </script>
+</body>
+</html>

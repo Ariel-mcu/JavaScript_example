@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript : 巢狀迴圈 (nested loop)</title>
+</head>
+<body>
+    <!--
+        123456
+        123456
+        123456
+        123456
+        123456
+        123456 
+    -->
+</body>
+<p id="result"></p>
+
+<script>
+    window.onload = function(){
+        const ROWS = 6;
+        const COLS = 6;
+
+        let result = '';
+
+        for(let row = 1; row <= ROWS; row++){
+            //外圍定義row(列)，列優先 rows-major
+            // console.log(`row; ${row}`);
+            for(let col = 1; col <= COLS; col++){
+                //再定義內圍col(行)
+                // console.log(`col; ${col}`);
+                result += `${col}`
+            }
+            result += '<br>'
+            //換行
+        }
+        document.getElementById('result').innerHTML = result;
+        //innerHTML字串換行
+    };
+</script>
+</html>

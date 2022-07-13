@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript: 輸入秒數並計算幾分幾秒</title>
+</head>
+<body>
+    <!-- seconds: <input type="text" id="seconds"> -->
+    <!-- <button onclick="calculate()">Calculate</button> -->
+                 <!-- calculate 計算機 -->
+    <!-- p#result -->
+    <p id="result"></p>
+    
+
+    <script>
+        //function calculate() 物件事件處理函數
+        function calculate(){
+        //1
+            //let seconds = document.getElementById('seconds').value;
+
+            //let mintues = seconds / 60;
+            //console.log(mintues);//250 / 60 == 4.16666666666666667
+
+            //let mintues = parseInt(seconds / 60); //運算完之後只取整數值
+            //console.log(mintues); //250 / 60 == 4
+
+            //let left = seconds % 60;
+
+            //result.innerText = `${seconds} 秒是 ${mintues} 分 ${left} 秒`;
+
+        //2
+            //let seconds = document.getElementById('seconds').value;
+            //result.innerText = `${seconds} 秒是 ${parseInt(seconds / 60)} 分 ${seconds % 60} 秒`;
+
+        }
+
+        //3 動態產生 1 ~ 1000 秒
+        let seconds = parseInt(Math.random() * 1000) + 1;
+        let mintues = parseInt(seconds / 60);
+        let left = seconds % 60;
+
+        result.innerText = `${seconds} 秒是 ${mintues} 分 ${left} 秒`;
+
+    </script>
+</body>
+</html>

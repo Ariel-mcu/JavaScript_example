@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="new.js"></script>
+    <title>events</title>
+</head>
+<body>
+    <form id="theForm">
+        <fieldset>
+            <legend>register the event</legend>
+            <p>Select the events you want to listen for.</p>
+            <div>
+                <label class="format">name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label class="format">age</label>
+                <input type="number" name="age" id="age">
+            </div>
+            <div>
+                <input type="file" name="file" id="file">
+            </div>
+            <hr>
+            <div>
+                <input type="checkbox" name="click" id="click" >
+                <!-- checked 預選 -->
+                <label >click</label>
+            </div>
+            <div>
+                <input type="checkbox" name="select" id="select">
+                <label >select</label>
+            </div>
+            <div>
+                <input type="checkbox" name="contextmenu" id="contextmenu">
+                <label >contextmenu</label>
+            </div>
+            <div>
+                <input type="checkbox" name="change" id="change">
+                <label >change</label>
+            </div>
+            <div>
+                <input type="checkbox" name="keyup" id="keyup">
+                <label >keyup</label>
+            </div>
+            <div>
+                <input type="checkbox" name="input" id="input">
+                <label >input</label>
+            </div>
+            
+            <div>
+                <button id="submit">submit</button>
+            </div>
+            <textarea id="feedback"></textarea>
+        </fieldset>
+    </form>
+</body>
+</html>

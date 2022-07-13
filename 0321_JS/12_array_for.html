@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript : for Array 月份陣列</title>
+</head>
+<body>
+</body>
+<p id="result"></p>
+
+<script>
+    window.onload = function(){
+        // let months1 = 'January';
+        // let months2 = 'February';
+        // let months3 = 'March';
+        // let months4 = 'April';
+        // let months5 = 'May';
+        // let months6 = 'June';
+
+        let result = '';
+        //陣列
+        let months = ['January','February','March','April','May','June'];
+                //   months[0],months[1],months[2],months[3],months[4],months[5],
+                console.log(months.length);
+
+                //陣列寫for迴圈
+                  for(let i =0; i < months.length; i++){
+                    result += `${months[i]} <br>`;
+                  }
+
+
+        
+        document.getElementById('result').innerHTML = result;
+        
+    };
+</script>
+</html>

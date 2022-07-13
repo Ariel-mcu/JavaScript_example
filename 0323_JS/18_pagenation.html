@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: 如何切分頁(pagenation)</title>
+</head>
+<body>   
+    <!-- 每個分頁呈現 12 筆資料，請輸入有幾筆資料，並計算需要切多少分頁? -->
+    一共有幾筆資料: <input type="text" id="data">
+    <button id="calButton">calculate</button>
+
+    <p id="feedback"></p>
+        
+    <script>
+        function doFirst(){
+            calButton.addEventListener('click',calculate);
+        }
+        function calculate(){
+            let data = document.getElementById('data').value;
+            let pages = 0;
+            let perPage = 12;
+
+            // pages += parseInt(data / perPage)
+            // pages += (data % perPage == 0) ? 0 : 1;
+
+            pages += Math.ceil(data / perPage);
+            
+            document.getElementById('feedback').innerText = `You have divided the data into ${pages} ${(pages <= 1) ? 'page' : 'pages'}.`
+        }
+        window.onload = doFirst;
+        
+    </script>
+</body>
+</html>

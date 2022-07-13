@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <script>
+        let num = 2000;
+        document.write('<h1 style="color:red;"> Hello,parent! Give me '+ num +' dollars.</h1>')//ES5的字串串接
+        document.write(`<h1 style="color:blue;"> Hello,parent! Give me ${num} dollars.</h1>`)//ES6的字串串接
+
+        const NUM = 123;
+        document.write(`<h1 style="color:purple;"> ${NUM} </h1>`)
+        //NUM = 456; // error: Assidnment to constant variable. 常數不能被 reassigned
+        const SEC_PER_MIN = 60;//一分鐘有60秒
+        // JSoutput
+        // output到網頁上
+        // document.write() 以後少用
+        // div物件.innerHTML = `<h1>Hello</h1>`
+        // div物件.innerText = `Hello, JS!`
+        // div物件.textContent = `Hello, JS!` //文字加標籤
+
+        //output到視窗
+        //1
+        //alert('HELLO')  跳出視窗只能按取消
+        //2
+        //let ans = confirm(`Are you sure you want to reset the form?`)
+        // 跳出視窗確定或取消
+        //console.log(ans); //clg 回傳答覆
+        //import moduleName from 'module'; //imp
+        //3
+        //let name = prompt(`What's your name?`)
+        //跳出可以輸入的視窗
+        //console.log(name); //回傳填寫後的結果
+
+        //output 到 console 上
+        console.log('ABC');
+    </script>
+</head>
+<body>
+    <!-- alt+上下左右鍵換行 -->
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <!-- alt+z自動換行 -->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas id molestiae excepturi maiores ipsam quod quibusdam modi, libero, officiis quae eaque, possimus consequuntur laborum eius iusto repellat rem quia sed?
+    Voluptatem unde in recusandae ipsa, eos accusamus aliquam ad tenetur iste sit distinctio cumque nobis dolor, debitis corrupti quasi eligendi beatae iure. Iusto consequuntur obcaecati ullam non possimus eum totam.
+    Minus perspiciatis repudiandae praesentium rem corrupti natus quod unde illum. Repellendus eius eos ad officiis, assumenda veniam voluptatibus repudiandae, accusamus accusantium dicta ipsum sit error, nemo asperiores odio recusandae magnam.
+    Id, odio minima voluptate architecto, fugit veniam praesentium autem ex quasi natus quaerat delectus velit a? Dolores repellendus iure rem accusamus, molestiae consequuntur quisquam cum suscipit dolor eum libero blanditiis.
+    Aliquam natus quo sed maxime veritatis, similique consequatur. Officiis nam perferendis, magni quos repudiandae nostrum, laudantium temporibus, sit officia at dignissimos tenetur doloribus id quisquam exercitationem dolor incidunt excepturi hic?</p>
+</body>
+</html>

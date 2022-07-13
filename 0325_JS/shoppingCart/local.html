@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+</head>
+<body>
+    <button onclick="show()">Show</button>
+
+    <script>
+        function show(){
+            if(localStorage['username'] == null){
+                let name = prompt(`What's your username?`)
+                localStorage['username'] = name;
+            }else{
+                alert(localStorage['username'])
+            }
+        }
+
+        // 設定 storage
+        // localStorage['username'] = 'Peter';
+        // localStorage.setItem('username','Peter');
+
+        // 取得 storage 
+        // let name = localStorage['username']
+        // let name = localStorage.getItem('username');
+
+        // remove storage
+        // localStorage.removeItem('username');
+
+        // clear all
+        // localStorage.clear();
+    </script>    
+</body>
+</html>

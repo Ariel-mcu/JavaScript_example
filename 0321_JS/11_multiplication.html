@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript : 巢狀迴圈4 (nested loop) -- 九九乘法</title>
+</head>
+<body>
+    <!--
+        1  2  3  4  5  6  7  8  9
+        2  4  6  8 10 12 14 16 18
+        3  6  9 12 15 18 21 24 27
+        4  8 12 16 20 24 28 32 36 
+        5 10 15 20 25 30 35 40 45 
+        6 12 18 24 30 36 42 48 54 
+        7 14 21 28 35 42 49 56 63 
+        8 16 24 32 40 48 56 64 72 
+        9 18 27 36 45 54 63 72 81
+    -->
+</body>
+<p id="result"></p>
+
+<script>
+    window.onload = function(){
+        const ROWS = 9;
+        const COLS = 9;
+
+        let result = '';
+
+        for(let row = 1; row <= ROWS; row++){
+            //外圍定義row(列)，列優先 rows-major
+            // console.log(`row; ${row}`);
+            for(let col = 1; col <=  COLS; col++){
+                //再定義內圍col(行)
+                // console.log(`col; ${col}`);
+                result += ((row * col <= 9) ? `&nbsp;&nbsp;${row * col}&nbsp;` : `${row * col}&nbsp; `)
+            }
+            result += '<br>'
+            //換行
+        }
+        document.getElementById('result').innerHTML = result;
+        //innerHTML字串換行
+    };
+</script>
+</html>

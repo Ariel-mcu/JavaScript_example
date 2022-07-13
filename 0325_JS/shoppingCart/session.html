@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Storage</title>
+</head>
+<body>
+    <button onclick="show()">Show</button>
+
+    <script>
+        function show(){
+            if(sessionStorage['username'] == null){
+                let name = prompt(`What's your username?`)
+                sessionStorage['username'] = name;
+            }else{
+                alert(sessionStorage['username'])
+            }
+
+        }
+
+        // 設定 storage
+        // sessionStorage['username'] = 'Peter';
+        // sessionStorage.setItem('username','Peter');
+
+        // 取得 storage 
+        // let name = sessionStorage['username']
+        // let name = sessionStorage.getItem('username');
+
+        // remove storage
+        // sessionStorage.removeItem('username');
+
+        // clear all
+        // sessionStorage.clear();
+    </script>    
+</body>
+</html>

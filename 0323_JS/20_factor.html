@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: switch</title>
+</head>
+<body>
+    <p id="result"></p>
+        
+    <script>
+        // 產生 1 ~ 100 之間的整數亂數
+        // 合數(也稱為合成數)是除了1和其本身外具有其他正因數的正整數
+        function doFirst(){
+            let num = parseInt(Math.random() * 100) + 1;
+            let result = '';
+
+            for(div = 2, isPrime = true; div * div <= num; div++){
+                if(num % div == 0){
+                    if(div * div != num){
+                        result += `${num} is divisible by ${div} and ${num / div}\n`;
+                    }else{
+                        result +=  `${num} is divisible by ${div}\n`;
+                    }
+
+                    isPrime = false;
+                }
+            }
+
+            if(isPrime == true){
+                result += `${num} is prime`;
+            }
+
+            document.getElementById('result').innerText = result;
+
+
+            // 以下為思考的過程
+            // 1
+            // let num = 18;
+            // for(div = 2; div < num; div++){
+            //     if(num % div == 0){
+            //         console.log(`${num} is divisible by ${div}`);
+            //     }
+            // }
+
+            // 2
+            // let num = 18;
+            // for(div = 2; div * div < num; div++){
+            //     if(num % div == 0){
+            //         console.log(`${num} is divisible by ${div} and ${num / div}`);
+            //     }
+            // }
+
+            // 3
+            // let num = 36;
+            // for(div = 2; div * div <= num; div++){
+            //     if(num % div == 0){
+            //         console.log(`${num} is divisible by ${div} and ${num / div}`);
+            //     }
+            // }
+
+            // 4
+            // let num = 36;
+            // for(div = 2; div * div <= num; div++){
+            //     if(num % div == 0){
+            //         if(div * div != num){
+            //             console.log(`${num} is divisible by ${div} and ${num / div}`);
+            //         }else{
+            //             console.log(`${num} is divisible by ${div}`);
+            //         }
+            //     }
+            // }
+
+            // 5 如果是質數
+            // let num = 23;
+            // // let isPrime = true;  // 假設所有的數都是質數
+
+            // for(div = 2, isPrime = true; div * div <= num; div++){
+            //     if(num % div == 0){
+            //         if(div * div != num){
+            //             console.log(`${num} is divisible by ${div} and ${num / div}`);
+            //         }else{
+            //             console.log(`${num} is divisible by ${div}`);
+            //         }
+
+            //         isPrime = false;
+            //     }
+            // }
+
+            // if(isPrime == true){
+            //     console.log(`${num} is prime`);
+            // }
+            
+            
+        }
+        window.addEventListener('load',doFirst)
+    </script>
+</body>
+</html>

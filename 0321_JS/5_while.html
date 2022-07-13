@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript : while迴圈</title>
+</head>
+<body>
+    <p id="result"></p>
+
+
+    <script>
+        window.onload = function(){//匿名函數
+            //跟 HTML 畫面產生關聯，建立事件聆聽
+            //1. while
+            let sum = 0;
+            let n = 1;
+
+            while(n <= 5){
+                sum = sum + n; // sum += n;
+                n++;
+            }
+            result.innerText = `1 到 5 加總的結果為: ${sum}`;
+        };   
+    </script>
+
+</body>
+</html>

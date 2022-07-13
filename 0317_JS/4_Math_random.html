@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript: Math.random()</title>
+</head>
+<body>
+    <p id="result"></p>
+
+    <!-- Math.random(): 產生 0(包含) ~ 1(不包含) 之間的亂數 
+        Math.random() ==> 0 ~ 0.999999
+
+        公式:parseInt(Math.random() * 總個數) + 最小值
+
+        Ex. 產生介於 1 ~ 100 之間的整數亂數
+        Math.random()                       ==> 0 ~ 0.999999
+        Math.random() * 100                 ==> 0 ~ 0.99.9999
+        parseInt(Math.random() * 100)       ==> 0 ~ 99
+        parseInt(Math.random() * 100) + 1   ==> 1 ~ 100
+
+        Ex. 產生介於 -5 ~ 5 之間的整數亂數
+        parseInt(Math.random() * 11) - 5 
+
+         Ex. 產生介於 1 ~ 6 之間的整數亂數
+        parseInt(Math.random() * 6) + 1
+
+    -->
+
+    <script>
+        result.innerText = `${parseInt(Math.random() * 6) + 1}`;
+    </script>
+</body>
+</html>

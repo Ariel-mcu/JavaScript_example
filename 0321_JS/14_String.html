@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: String 物件</title>
+</head>
+<body>   
+    1. 建立字串物件
+       let str = 'ABC';
+       let str = new String('ABC');
+
+       let str = '';
+       let str = new String();
+
+    2. 如何存取?
+       let str = 'ABC';
+        console.log(str);
+
+    3. 屬性: length
+       <!-- .html -->
+       <input type="email" id="email">
+
+       <!-- .js -->
+       let email = document.getElementById('email');
+       if(email.value.length > 0){ ... }
+    
+    4. 方法:
+       - 拆分
+         charAt(index)
+         indexOf(字串) | lastIndexOf(字串)
+         slice(first index[, last index]) 從字串中找出子字串(包含 first 不包含 last)
+         substr(index, count) 從字串中找出子字串)
+
+       - 操作字串
+         concat(字串1[,字串2,字串3,...]) 字串串接
+         toLowerCase()
+         toUpperCase()
+         split('delimeter')   字串切割成陣列
+         replace(子字串, 欲取代的字串)
+
+    5. 跳脫字元
+       - 換行: \n | \r\n 
+       - tab: \t
+       - \\ 
+       - \'
+       - \"
+
+    <script>
+        window.onload = function(){ 
+           let fullName = 'Silvia Huang';
+
+           document.write(`Length: ${fullName.length} <br>`);
+           document.write(`charAt(index): ${fullName.charAt(3)} <br>`);
+           document.write(`charAt(index): ${fullName.charAt(fullName.length - 1)} <br>`);  //找最後一個字元
+           document.write(`<hr>`);
+
+           document.write(`indexOf(字串): ${fullName.indexOf('Huang')} <br>`);  // 7
+           document.write(`indexOf(字串): ${fullName.indexOf('a')} <br>`);      // 5
+           document.write(`lastIndexOf(字串): ${fullName.lastIndexOf('a')} <br>`);   // 9
+           document.write(`<hr>`);
+
+           let language = 'JavaScript';
+           document.write(`slice(index): ${language.slice(3)} <br>`);
+           document.write(`${language}<br>`);  // JavaScript
+
+           document.write(`slice(index,index): ${language.slice(3,9)} <br>`);
+           document.write(`slice(index,index): ${language.slice(0,4)} <br>`);
+           document.write(`slice(index,index): ${language.slice(0,-6)} <br>`);
+
+           document.write(`substr(index, count): ${language.substr(0,4)} <br>`);
+           document.write(`substr(index, count): ${language.substr(3,9)} <br>`);
+           document.write(`<hr>`);
+
+           let address = '2215 NE 68th. st';
+           document.write(`${address.concat('<br>Seattle',' WA', 98115, '<br>').concat('TEL:','(206)523-5480')}`);
+           document.write(`${address.concat('<br>Seattle, WA98115')}<br> TEL: (206)523-5480`)
+           document.write(`<hr>`);
+
+           language = 'JavaScript';
+           document.write(`indexOf(字串): ${language.indexOf('Script')} <br>`);
+           document.write(`indexOf(字串): ${language.indexOf('script')} <br>`);
+           document.write(`indexOf(字串): ${language.toLowerCase().indexOf('script')} <br>`);
+           document.write(language + '<br>');  // JavaScript
+           document.write(fullName.toUpperCase());  // JavaScript
+           document.write(`<hr>`);
+           
+           let months = 'January, February, March, April, May, June, July, August, September, October, November, December';
+           // document.write(`${months.split(', ')[2]}<br>`);
+           let monthArray = months.split(', ');   // monthArray 是陣列
+           // console.log(monthArray);
+
+           for(let i = 0; i < monthArray.length; i++){
+                document.write(`${monthArray[i]}<br>`);
+           }
+           document.write(`<hr>`);
+
+           let addItemList = 'A1001, A1005, A1006, A1002, ';
+           document.write(`addItemList: ${addItemList} <br>`);
+           console.log(addItemList);
+
+           addItemList = addItemList.replace('A1005, ','')
+           document.write(`After replace(): ${addItemList} <br>`);
+           console.log(addItemList);
+           document.write(`<hr>`);
+
+           // 印出 I've got an idea.
+           document.write("I've got an idea.<br>")
+           document.write('I\'ve got an idea.<br>')
+
+           // 印出 Chapter 3: "Simple String"
+           document.write('Chapter 3: "Simple String"<br>')
+           document.write("Chapter 3: \"Simple String\"<br>")
+           document.write(`<hr>`);
+
+           // parseInt()
+           document.write(`${parseInt('123.456')} <br>`);
+           document.write(`${parseInt(123.456)} <br>`);
+           document.write(`${parseInt('I saw 100 ducks.')} <br>`);
+           document.write(`${parseInt('100 ducks.')} <br>`);
+           document.write(`${parseInt('100 ducks.') * 5} <br>`);
+           document.write(`${parseInt('16px')} <br>`);
+
+           // null 和 undefined
+           // null      --->  可以當成數值來運算   console.log(null * 0);      //0
+           // undefined --->  不可以當成數值來運算 console.log(undefined * 0);  // NaN
+
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+*{
+    /* margin: 0px;
+    padding: 0px;
+    list-style: none; */
+    font: 18px Consolas;
+}
+body{
+    background: rgba(108, 166, 214, 0.815);
+}
+#theForm{
+    background: rgb(194, 219, 230);
+    width: 260px;
+    border: 3px solid rgb(49, 68, 173);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 50px;
+}
+#theForm div{
+    margin: 10px 0px;
+}
+/* label,input[type="submit"]{
+    text-transform: capitalize;
+} */
+label,#submit{
+    text-transform: capitalize;
+}
+#result{
+    border: 1px dashed #ddd;
+    width: 215px;
+    height: 50px;
+
+    font: 20px Tahoma;
+    color: maroon;
+
+    text-align: center;
+    line-height: 50px;
+}
+p{
+    text-transform: capitalize;
+    font-size: 12px;
+}
